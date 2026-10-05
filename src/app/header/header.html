@@ -1,2 +1,4 @@
-<a routerLink="/home">Home</a>
-<a routerLink="/list">List Conferances</a>
+<nav aria-label="Navigation principale">
+  <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+  <a routerLink="/list" routerLinkActive="active">Conférences</a>
+</nav>

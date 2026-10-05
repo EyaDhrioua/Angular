@@ -1,0 +1,18 @@
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+}
+
+a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover,
+a.active {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
