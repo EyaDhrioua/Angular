@@ -27,6 +27,11 @@ input.ng-invalid {
   outline-color: #dc2626;
 }
 
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
 button {
   cursor: pointer;
 }
