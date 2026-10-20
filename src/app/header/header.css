@@ -1,18 +1,10 @@
-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.5rem;
-}
-
 a {
-  color: #fff;
-  font-weight: 600;
+  font: inherit;
+  color: inherit;
+  padding: .65rem .9rem;
+  border-radius: .5rem;
   text-decoration: none;
 }
-
-a:hover,
-a.active {
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
-}
+nav { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1rem; }
+a:hover, a.active { background: rgba(255, 255, 255, .3); }
+a.active { font-weight: 700; }

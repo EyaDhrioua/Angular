@@ -1,2 +1,27 @@
- {{conf().name}} - {{conf().date}} - {{conf().location}}
- <button (click)="inc()"></button>
+@if (conferance(); as item) {
+  <article class="details-card">
+    <p class="eyebrow">Détails de la conférence</p>
+    <h1>{{ item.name }}</h1>
+    <dl>
+      <div>
+        <dt>Identifiant</dt>
+        <dd>{{ item.id }}</dd>
+      </div>
+      <div>
+        <dt>Date</dt>
+        <dd>{{ item.date }}</dd>
+      </div>
+      <div>
+        <dt>Lieu</dt>
+        <dd>{{ item.place }}</dd>
+      </div>
+    </dl>
+    <a routerLink="/conferences">Retour à la liste</a>
+  </article>
+} @else {
+  <article class="details-card">
+    <h1>Conférence introuvable</h1>
+    <p>Aucune conférence ne correspond à l’identifiant {{ id() }}.</p>
+    <a routerLink="/conferences">Retour à la liste</a>
+  </article>
+}

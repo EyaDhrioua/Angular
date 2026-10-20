@@ -1,0 +1,22 @@
+.site-header {
+  min-height: 200px;
+  background: #ec6e87;
+}
+
+.site-content {
+  min-height: 700px;
+  padding: 1px 0 3rem;
+  background: #f1e6e6;
+}
+
+.site-footer {
+  min-height: 200px;
+  background: #6c6b6b;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .site-header { min-height: 120px; }
+  .site-content { min-height: 65vh; }
+  .site-footer { min-height: 120px; }
+}

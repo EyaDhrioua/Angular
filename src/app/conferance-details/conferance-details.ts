@@ -1,15 +1,17 @@
-import { Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { CONFERANCES } from '../conferances';
 
 @Component({
   selector: 'app-conferance-details',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './conferance-details.html',
   styleUrl: './conferance-details.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConferanceDetails {
- conf = input<any>() 
-   increment = output();
- inc(){
- this.increment.emit();
- }
+  id = input.required<string>();
+  conferance = computed(() =>
+    CONFERANCES.find((item) => item.id === Number(this.id())),
+  );
 }
